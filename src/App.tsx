@@ -5,9 +5,7 @@ import { io } from 'socket.io-client';
 import style from 'test_style.module.css';
 import { ReturnComponentType } from 'types';
 
-const socket = io('https://chat-online-socket.herokuapp.com', {
-  withCredentials: true,
-});
+const socket = io('https://chat-online-socket.herokuapp.com');
 export const App = (): ReturnComponentType => {
   const [messages, setMessages] = useState<any[]>([]);
   const [message, setMessage] = useState<string>('');
